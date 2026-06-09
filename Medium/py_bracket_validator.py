@@ -1,9 +1,9 @@
 def bracket_validator(s: str) -> bool:
     l =["(", ")", "[", "]", "{", "}"]
 
-    for chari in s:
-        if chari not in l:
-            s = s.replace(chari,"")
+    for c in s:
+        if c not in l:
+            s = s.replace(c,"")
         s = s.replace("()", "")
         s = s.replace("[]", "")
         s = s.replace("{}", "")
