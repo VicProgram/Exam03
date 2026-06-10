@@ -9,7 +9,7 @@ def pattern_tracker(text: str) -> int:
 
 
 
-print(pattern_tracker("12a34"))
+print(pattern_tracker("012a34"))
 print(pattern_tracker("01234567"))
 print(pattern_tracker("abc"))
 print(pattern_tracker("1a2b3c4"))

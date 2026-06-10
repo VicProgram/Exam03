@@ -1,5 +1,10 @@
 def whisper_cipher(text: str, shift: int) -> str:
-        
+
+    if not isinstance(text, str):
+        return 'ERROR'
+    if not isinstance(shift, int):
+        return 'ERROR'
+
     res = ""
     for c in text:
         if c.isalpha():
@@ -7,12 +12,11 @@ def whisper_cipher(text: str, shift: int) -> str:
                 start = ord('a')
             else:
                 start = ord('A')
-            newch = chr((ord(c) - start + shift) % 26 + start)
-            res += newch
+            newc = chr((ord(c) - start + shift ) % 26 + start)
+            res += newc
         else:
             res += c
-
     return res
 
 
-print(whisper_cipher("xyzabc123", 1))
+print(whisper_cipher("hello", 3))
